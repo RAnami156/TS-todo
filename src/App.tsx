@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 import InputFeild from './components/InputFeild';
 import { Todo } from './model';
+import TodoList from './components/TodoList';
 
 //красивая стрелочная функция главная
 const App: React.FC = () => {
@@ -29,10 +30,8 @@ const App: React.FC = () => {
       <span className="heading">Taskify</span>
       {/* здесь уже по трудне так как тут мы передаем данные элемент ребенку(тут мы в файле бати)   */}
       <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      {/* <TodoList/> */}
-      {todos.map((t) => (
-        <li>{t.todo}</li>
-      ))}
+      <TodoList todos={todos} setTodos={setTodos}/>
+
     </div>
   );
 }
