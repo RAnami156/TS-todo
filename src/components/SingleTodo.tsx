@@ -1,6 +1,7 @@
-import React from 'react'
-import { Todo } from '../model'
-import "./style.css"
+import React from 'react';
+import { Todo } from '../model';
+import "./style.css";
+import { AiFillEdit } from 'react-icons/ai';
 
 type Props = {
     todo: Todo;
@@ -10,11 +11,18 @@ type Props = {
 
 const SingleTodo = ({todo,todos,setTodos}: Props) => {
   return (
-    <div className='todos_single'>
+    <form className='todos_single'>
       <span className="todos_single-text">
         {todo.todo}
       </span>
+
+    <div>
+      <span className="icon"> <AiFillEdit/> </span>
+      <span className="icon"></span>
+      <span className="icon"></span>
     </div>
+
+    </form>
   )
 }
 
